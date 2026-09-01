@@ -4,10 +4,6 @@ library(readxl)
 library(DT)
 library(dplyr)
 library(tidyr)
-install.packages("shinylive")
-install.packages("httpuv")
-library(shinylive)
-library(httpuv)
 
 # 1. USER INTERFACE (UI)
 ui <- navbarPage(
@@ -552,12 +548,3 @@ server <- function(input, output, session) {
 
 # 4. LAUNCH APP
 shinyApp(ui = ui, server = server)
-
-# 1. Move back into the docs folder where your file is
-setwd("C:/Users/DELL/Desktop/docs")
-
-# 2. Rename the file to app.R automatically
-file.rename("completedassignment.R.R", "app.R")
-
-# 3. Export to a new output folder named site
-shinylive::export(".", "site")
